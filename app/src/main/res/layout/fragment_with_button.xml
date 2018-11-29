@@ -10,8 +10,9 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/press_me"/>
 
-    <FrameLayout
-        android:id="@+id/fragmentChild"
+    <fragment
+        android:id="@+id/childFragment"
+        android:name="com.syrovama.fragmentstask.ChildFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

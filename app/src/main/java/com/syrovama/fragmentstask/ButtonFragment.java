@@ -26,21 +26,14 @@ public class ButtonFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v =  inflater.inflate(R.layout.fragment_with_button, container, false);
-        FragmentManager manager = getChildFragmentManager();
-        mChildFragment = (ChildFragment) manager.findFragmentById(R.id.fragmentChild);
-        if (mChildFragment == null) {
-            mChildFragment = new ChildFragment();
-            manager.beginTransaction()
-                    .add(R.id.fragmentChild, mChildFragment)
-                    .commit();
-        }
-        return v;
+        return inflater.inflate(R.layout.fragment_with_button, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        FragmentManager manager = getChildFragmentManager();
+        mChildFragment =  (ChildFragment)manager.findFragmentById(R.id.childFragment);
         mButton = view.findViewById(R.id.button);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override

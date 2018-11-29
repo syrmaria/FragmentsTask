@@ -64,7 +64,7 @@ public class TextFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mEditText = view.findViewById(R.id.edit_text);
+        mEditText = view.findViewById(R.id.editText);
         mEditText.addTextChangedListener(new UserInputWatcher());
     }
 
